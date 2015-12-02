@@ -1,7 +1,7 @@
 Telescope.menuItems.add("adminMenu", {
-  route: 'categories',
-  label: 'Categories',
-  description: 'add_and_remove_categories'
+  route: 'adminCategories',
+  label: _.partial(i18n.t, 'categories'),
+  description: _.partial(i18n.t, 'add_and_remove_categories')
 });
 
 // push "categories" modules to postHeading
@@ -21,10 +21,17 @@ Telescope.modules.add("mobileNav", {
   order: 10
 });
 
+<<<<<<< HEAD:packages/telescope-tags/lib/modules.js
 Telescope.modules.add("top", {
   template: 'category_title',
   order: 10,
   only: ["posts_category"]
+=======
+Telescope.modules.add("postsListTop", {
+  template: 'category_title',
+  order: 10,
+  only: ["postsDefault"]
+>>>>>>> TelescopeJS/master:packages/telescope-tags/lib/modules.js
 });
 
 // we want to wait until categories are all loaded to load the rest of the app

@@ -209,10 +209,15 @@ Posts.views.add("campaign", function (terms) {
   };
 });
 
-Telescope.modules.add("hero", {
+Telescope.modules.add("contentTop", {
   template: 'newsletter_banner',
+<<<<<<< HEAD
   order: 10,
   only: ["posts_default"]
+=======
+  order: 1,
+  only: ["postsDefault"]
+>>>>>>> TelescopeJS/master
 });
 
  function subscribeUserOnProfileCompletion (user) {

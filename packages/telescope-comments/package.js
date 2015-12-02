@@ -1,7 +1,11 @@
 Package.describe({
   name: "telescope:comments",
   summary: "Telescope comments package",
+<<<<<<< HEAD
   version: "0.23.0",
+=======
+  version: "0.25.5",
+>>>>>>> TelescopeJS/master
   git: "https://github.com/TelescopeJS/Telescope.git"
 });
 
@@ -10,10 +14,17 @@ Package.onUse(function (api) {
   api.versionsFrom(['METEOR@1.0']);
 
   api.use([
+<<<<<<< HEAD
     'telescope:lib@0.23.0',
     'telescope:i18n@0.23.0',
     'telescope:settings@0.23.0',
     'telescope:users@0.23.0'
+=======
+    'telescope:lib@0.25.5',
+    'telescope:i18n@0.25.5',
+    'telescope:settings@0.25.5',
+    'telescope:users@0.25.5'
+>>>>>>> TelescopeJS/master
   ]);
 
   api.addFiles([
@@ -43,13 +54,19 @@ Package.onUse(function (api) {
     'lib/client/templates/comments_list/comments_list_compact.js',
     'lib/client/templates/comments_list/comments_list_controller.html',
     'lib/client/templates/comments_list/comments_list_controller.js',
+    'lib/client/templates/comment_controller/comment_controller.html',
+    'lib/client/templates/comment_controller/comment_controller.js'
   ], ['client']);
 
   api.addFiles([
     'lib/server/publications.js',
   ], ['server']);
 
+<<<<<<< HEAD
   var languages = ["ar", "bg", "cs", "da", "de", "el", "en", "es", "et", "fr", "hu", "it", "ja", "ko", "nl", "pl", "pt-BR", "ro", "ru", "sv", "th", "tr", "vi", "zh-CN"];
+=======
+  var languages = ["ar", "bg", "cs", "da", "de", "el", "en", "es", "et", "fr", "hu", "id", "it", "ja", "kk", "ko", "nl", "pl", "pt-BR", "ro", "ru", "sl", "sv", "th", "tr", "vi", "zh-CN"];
+>>>>>>> TelescopeJS/master
   var languagesPaths = languages.map(function (language) {
     return "i18n/"+language+".i18n.json";
   });

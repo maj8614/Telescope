@@ -1,5 +1,11 @@
 Meteor.methods({
   removeCategory: function (categoryId) {
+<<<<<<< HEAD
+=======
+    
+    check(categoryId, String);
+
+>>>>>>> TelescopeJS/master
     if (Users.is.admin(this.userId)) {
 
       var category = Categories.findOne(categoryId);
@@ -15,7 +21,11 @@ Meteor.methods({
       // find any post with this category and remove it
       var postsUpdated = Posts.update({categories: {$in: [categoryId]}}, {$pull: {categories: categoryId}}, {multi: true});
 
+<<<<<<< HEAD
       console.log("// Removed category “"+category.name+"” and updated "+postsUpdated+" posts.")
+=======
+      return postsUpdated;
+>>>>>>> TelescopeJS/master
 
     }
   }

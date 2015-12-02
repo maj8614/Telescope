@@ -1,2 +1,7 @@
 {
+<<<<<<< HEAD
+=======
+  "kadiraAppId" : "Identifiant Kadira de l'application",
+  "kadiraAppSecret" : "Secret Kadira de l'application"
+>>>>>>> TelescopeJS/master
 }

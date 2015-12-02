@@ -5,9 +5,16 @@
   "new" : "새글",
   "best" : "베스트",
   "digest" : "다이제스트",
+<<<<<<< HEAD
   "settings" : "설정",
   "admin" : "관리자",
   "post" : "글",
+=======
+  "users" : "유저",
+  "settings" : "설정",
+  "admin" : "관리자",
+  "post" : "글쓰기",
+>>>>>>> TelescopeJS/master
   "toolbox" : "도구 상자",
   "sign_up_sign_in" : "가입/로그인",
   "my_account" : "내 계정",
@@ -39,6 +46,10 @@
   "id" : "ID",
   "github" : "깃허브(GitHub)",
   "site" : "사이트",
+<<<<<<< HEAD
+=======
+  "submitted_posts" : "작성 게시물",
+>>>>>>> TelescopeJS/master
   "pending" : "보류",
   "loading" : "로딩중",
   "you_must_be_logged_in" : "로그인이 필요합니다.",

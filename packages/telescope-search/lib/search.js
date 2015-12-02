@@ -9,6 +9,7 @@ Telescope.modules.add("mobileNav", {
   order: 1
 });
 
+<<<<<<< HEAD
 Telescope.modules.add("adminMenu", {
   route: 'searchLogs',
   label: 'search_logs',
@@ -56,3 +57,6 @@ Posts.views.add("search", function (terms, baseParameters) {
   });
   return parameters;
 });
+=======
+Telescope.colorElements.add('.search.empty .search-field', 'secondaryContrastColor');
+>>>>>>> TelescopeJS/master

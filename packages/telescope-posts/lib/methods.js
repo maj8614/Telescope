@@ -86,7 +86,6 @@ Posts.edit = function (postId, modifier, post) {
 
   // ------------------------------ Callbacks ------------------------------ //
 
-  // run all post edit server callbacks on modifier successively
   modifier = Telescope.callbacks.run("postEdit", modifier, post);
 
   // ------------------------------ Update ------------------------------ //
@@ -95,7 +94,7 @@ Posts.edit = function (postId, modifier, post) {
 
   // ------------------------------ Callbacks ------------------------------ //
 
-  Telescope.callbacks.runAsync("postEditAsync", Posts.findOne(postId));
+  Telescope.callbacks.runAsync("postEditAsync", Posts.findOne(postId), post);
 
   // ------------------------------ After Update ------------------------------ //
   return Posts.findOne(postId);
@@ -247,31 +246,49 @@ Meteor.methods({
   approvePost: function(postId){
 
     check(postId, String);
+<<<<<<< HEAD
     var post = Posts.findOne(postId);
+=======
+    
+    var post = Posts.findOne(postId);
+    var now = new Date();
+>>>>>>> TelescopeJS/master
 
     if(Users.is.admin(Meteor.user())){
-      var set = {status: 2};
 
-      // unless post is already scheduled and has a postedAt date, set its postedAt date to now
-      if (!post.postedAt)
-        set.postedAt = new Date();
+      var set = {status: Posts.config.STATUS_APPROVED};
 
+<<<<<<< HEAD
+=======
+      if (!post.postedAt) {
+        set.postedAt = now;
+      }
+      
+>>>>>>> TelescopeJS/master
       Posts.update(post._id, {$set: set});
 
-      Telescope.callbacks.runAsync("postApprovedAsync", post);
+      Telescope.callbacks.runAsync("postApproveAsync", post);
 
     }else{
       Messages.flash('You need to be an admin to do that.', "error");
     }
   },
 
+<<<<<<< HEAD
   unapprovePost: function(postId){
+=======
+  rejectPost: function(postId){
+>>>>>>> TelescopeJS/master
 
     check(postId, String);
     var post = Posts.findOne(postId);
     
     if(Users.is.admin(Meteor.user())){
-      Posts.update(post._id, {$set: {status: 1}});
+
+      Posts.update(post._id, {$set: {status: Posts.config.STATUS_REJECTED}});
+
+      Telescope.callbacks.runAsync("postRejectAsync", post);
+    
     }else{
       Messages.flash('You need to be an admin to do that.', "error");
     }
@@ -312,6 +329,13 @@ Meteor.methods({
 
     // delete post
     Posts.remove(postId);
+
+    Telescope.callbacks.runAsync("postDeleteAsync", post);
+
+  },
+
+  checkForDuplicates: function (url) {
+    Posts.checkForSameUrl(url);  
   }
 
 });

@@ -1,7 +1,11 @@
-Telescope.modules.add("top", {
+Telescope.modules.add("contentTop", {
   template: "tagline_banner",
   order: 1,
+<<<<<<< HEAD
   only: ["posts_default"]
+=======
+  only: ["postsDefault"]
+>>>>>>> TelescopeJS/master
 });
 
 var showTaglineBanner = {

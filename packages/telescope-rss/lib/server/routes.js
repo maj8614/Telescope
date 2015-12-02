@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Meteor.startup(function () {
 
     // New Post RSS
@@ -39,25 +40,31 @@ Meteor.startup(function () {
       name: 'rss_posts_top',
       where: 'server'
     });
+=======
+Picker.route('/feed.xml', function(params, req, res, next) {
+  if (typeof params.query.view === "undefined") {
+    params.query.view = 'new';
+  }
+  res.end(servePostRSS(params.query, 'feed.xml'));
+});
+>>>>>>> TelescopeJS/master
 
-    // Best Post RSS
+Picker.route('/rss/posts/new.xml', function(params, req, res, next) {
+  res.end(servePostRSS({view: 'new'}, '/rss/posts/new.xml'));
+});
 
-    Router.route('/rss/posts/best.xml', function () {
-      this.response.write(servePostRSS('best', 'rss/posts/best.xml'));
-      this.response.end();
-    }, {
-      name: 'rss_posts_best',
-      where: 'server'
-    });
+Picker.route('/rss/posts/top.xml', function(params, req, res, next) {
+  res.end(servePostRSS({view: 'top'}, '/rss/posts/top.xml'));
+});
 
-    // Comment RSS
+Picker.route('/rss/posts/best.xml', function(params, req, res, next) {
+  res.end(servePostRSS({view: 'best'}, '/rss/posts/best.xml'));
+});
 
-    Router.route('/rss/comments.xml', function() {
-      this.response.write(serveCommentRSS());
-      this.response.end();
-    }, {
-      name: 'rss_comments',
-      where: 'server'
-    });
+Picker.route('/rss/category/:slug/feed.xml', function(params, req, res, next) {
+  res.end(servePostRSS({view: 'new', cat: params.slug}, '/rss/category/:slug/feed.xml'));
+});
 
+Picker.route('/rss/comments.xml', function(params, req, res, next) {
+  res.end(serveCommentRSS({}, '/rss/comments.xml'));
 });

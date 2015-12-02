@@ -1,7 +1,11 @@
 <template name="categories_menu">
-  <div class="categories-menu {{moduleClass}}">
+  <div class="categories-menu-wrapper {{moduleClass}}">
     {{#if hasCategories}}
+<<<<<<< HEAD
       {{> menuComponent menuName="categories" menuItems=menuItems menuMode=menuMode menuHierarchyKey="parentId"}}
+=======
+      {{> menuComponent menuName="categories" menuLabel=menuLabel itemTemplate="categories_menu_item" menuItems=menuItems menuType=menuType expandLevel=expandLevel}}
+>>>>>>> TelescopeJS/master
     {{/if}}
   </div>
 </template>

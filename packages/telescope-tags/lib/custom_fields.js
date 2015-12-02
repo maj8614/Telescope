@@ -8,6 +8,10 @@ Posts.addField(
       autoform: {
         noselect: true,
         type: "bootstrap-category",
+<<<<<<< HEAD
+=======
+        order: 50,
+>>>>>>> TelescopeJS/master
         options: function () {
           var categories = Categories.find().map(function (category) {
             return {

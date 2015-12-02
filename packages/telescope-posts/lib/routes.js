@@ -1,84 +1,18 @@
-/**
- * The Posts.controllers namespace
- * @namespace Posts.controllers
- */
-Posts.controllers = {};
-
-/**
- * Controller for all posts lists
- */
-Posts.controllers.list = RouteController.extend({
-
-  template: "posts_list_controller",
-
-  showViewsNav: true,
-
-  data: function () {
-
-    var terms = {
-      view: this.view,
-      limit: this.params.limit || Settings.get('postsPerPage', 10),
-      enableCache: true
-    };
-
-    // console.log('----------------- router running');
-
-    // note: the post list controller template will handle all subscriptions, so we just need to pass in the terms
-    return {
-      terms: terms
-    };
-  },
-
-  getTitle: function () {
-    return i18n.t(this.view);
-  },
-
-  getDescription: function () {
-    if (Router.current().route.getName() === 'posts_default') { // return site description on root path
-      return Settings.get('description');
-    } else {
-      return i18n.t(_.findWhere(Telescope.menuItems.get("viewsMenu"), {label: this.view}).description);
-    }
+FlowRouter.route('/', {
+  name: "postsDefault",
+  action: function(params, queryParams) {
+    BlazeLayout.render("layout", {main: "main_posts_list"});
   }
-
 });
 
-var getDefaultViewController = function () {
-  var defaultView = Settings.get('defaultView', 'top');
-  // if view we got from settings is available in Posts.views object, use it
-  if (!!Posts.controllers[defaultView]) {
-    return Posts.controllers[defaultView];
-  } else {
-    return Posts.controllers.top;
+FlowRouter.route('/posts/:_id/edit', {
+  name: "postEdit",
+  action: function(params, queryParams) {
+    BlazeLayout.render("layout", {main: "post_edit"});
   }
-};
-
-// wrap in startup block to make sure Settings collection is defined
-Meteor.startup(function () {
-  Posts.controllers.default = getDefaultViewController().extend({
-    getTitle: function () {
-      var title = Settings.get('title', 'Telescope');
-      var tagline = Settings.get('tagline');
-      var fullTitle = !!tagline ? title + ' – ' + tagline : title ;
-      return fullTitle;
-    }
-  });
 });
 
-/**
- * Controller for top view
- */
-Posts.controllers.top = Posts.controllers.list.extend({
-  view: 'top'
-});
-
-/**
- * Controller for new view
- */
-Posts.controllers.new = Posts.controllers.list.extend({
-  view: 'new'
-});
-
+<<<<<<< HEAD
 /**
  * Controller for best view
  */
@@ -195,91 +129,23 @@ Posts.controllers.page = RouteController.extend({
   },
 
   fastRender: true
+=======
+FlowRouter.route('/posts/:_id/:slug?', {
+  name: "postPage",
+  action: function(params, queryParams) {
+    BlazeLayout.render("layout", {main: "post_page"});
+  }
+>>>>>>> TelescopeJS/master
 });
 
-Meteor.startup(function () {
+var trackRouteEntry = function (context) {
+  var sessionId = Meteor.default_connection && Meteor.default_connection._lastSessionId ? Meteor.default_connection._lastSessionId : null;
+  Meteor.call('increasePostViews', context.params._id, sessionId);
+}
 
-  Router.route('/', {
-    name: 'posts_default',
-    controller: Posts.controllers.default
-  });
-
-  Router.route('/top/:limit?', {
-    name: 'posts_top',
-    controller: Posts.controllers.top
-  });
-
-  // New
-
-  Router.route('/new/:limit?', {
-    name: 'posts_new',
-    controller: Posts.controllers.new
-  });
-
-  // Best
-
-  Router.route('/best/:limit?', {
-    name: 'posts_best',
-    controller: Posts.controllers.best
-  });
-
-  // Pending
-
-  Router.route('/pending/:limit?', {
-    name: 'posts_pending',
-    controller: Posts.controllers.pending
-  });
-
-  // Scheduled
-
-  Router.route('/scheduled/:limit?', {
-    name: 'posts_scheduled',
-    controller: Posts.controllers.scheduled
-  });
-
-  // Post Edit
-
-  Router.route('/posts/:_id/edit', {
-    name: 'post_edit',
-    template: 'post_edit',
-    waitOn: function () {
-      return [
-        Telescope.subsManager.subscribe('singlePost', this.params._id),
-        Telescope.subsManager.subscribe('allUsersAdmin')
-      ];
-    },
-    data: function() {
-      return {
-        postId: this.params._id,
-        post: Posts.findOne(this.params._id)
-      };
-    },
-    fastRender: true
-  });
-
-  // Post Page
-
-  Router.route('/posts/:_id/:slug?', {
-    name: 'post_page',
-    controller: Posts.controllers.page
-  });
-
-  Router.route('/posts/:_id/comment/:commentId', {
-    name: 'post_page_comment',
-    controller: Posts.controllers.page,
-    onAfterAction: function () {
-      // TODO: scroll to comment position
-    }
-  });
-
-  // Post Submit
-
-  Router.route('/submit', {
-    name: 'post_submit',
-    template: 'post_submit',
-    waitOn: function () {
-      return Telescope.subsManager.subscribe('allUsersAdmin');
-    }
-  });
-
+FlowRouter.route('/submit', {
+  name: "postSubmit",
+  action: function(params, queryParams) {
+    BlazeLayout.render("layout", {main: "post_submit"});
+  }
 });

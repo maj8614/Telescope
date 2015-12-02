@@ -1,5 +1,8 @@
 Meteor.startup(function () {
+<<<<<<< HEAD
   // var prefix  = Telescope.config.customPrefix;
+=======
+>>>>>>> TelescopeJS/master
 
   // loop over custom prefixes
   Telescope.config.customPrefixes.forEach(function (prefix) {

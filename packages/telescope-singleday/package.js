@@ -1,7 +1,11 @@
 Package.describe({
   name: 'telescope:singleday',
   summary: 'Telescope Single Day package',
+<<<<<<< HEAD
   version: '0.23.0',
+=======
+  version: '0.25.5',
+>>>>>>> TelescopeJS/master
   git: "https://github.com/TelescopeJS/Telescope.git"
 });
 
@@ -15,7 +19,11 @@ Package.onUse(function (api) {
 
   // --------------------------- 1. Meteor packages dependencies ---------------------------
 
+<<<<<<< HEAD
   api.use(['telescope:core@0.23.0']);
+=======
+  api.use(['telescope:core@0.25.5']);
+>>>>>>> TelescopeJS/master
 
   // ---------------------------------- 2. Files to include ----------------------------------
 
@@ -28,7 +36,6 @@ Package.onUse(function (api) {
   // both
 
   api.addFiles([
-    'lib/routes.js',
     'lib/singleday.js'
   ], ['client', 'server']);
 
@@ -48,7 +55,11 @@ Package.onUse(function (api) {
 
   // i18n languages (must come last)
 
+<<<<<<< HEAD
   var languages = ["ar", "bg", "cs", "da", "de", "el", "en", "es", "et", "fr", "hu", "it", "ja", "ko", "nl", "pl", "pt-BR", "ro", "ru", "sv", "th", "tr", "vi", "zh-CN"];
+=======
+  var languages = ["ar", "bg", "cs", "da", "de", "el", "en", "es", "et", "fr", "hu", "id", "it", "ja", "kk", "ko", "nl", "pl", "pt-BR", "ro", "ru", "sl", "sv", "th", "tr", "vi", "zh-CN"];
+>>>>>>> TelescopeJS/master
   var languagesPaths = languages.map(function (language) {
     return "i18n/"+language+".i18n.json";
   });

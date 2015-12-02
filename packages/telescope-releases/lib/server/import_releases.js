@@ -21,6 +21,7 @@ var importRelease = function (number) {
 
 Meteor.startup(function () {
 
+<<<<<<< HEAD
   importRelease('0.11.0');
   importRelease('0.11.1');
   importRelease('0.12.0');
@@ -37,6 +38,9 @@ Meteor.startup(function () {
   importRelease('0.22.1');
   importRelease('0.22.2');
   importRelease('0.23.0');
+=======
+  importRelease('0.25.5');
+>>>>>>> TelescopeJS/master
 
   // if this is before the first run, mark all release notes as read to avoid showing them
   if (!Events.findOne({name: 'firstRun'})) {

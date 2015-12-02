@@ -1,7 +1,11 @@
 Package.describe({
   name: "telescope:releases",
   summary: "Show Telescope release notes and phone home with some stats.",
+<<<<<<< HEAD
   version: "0.23.0",
+=======
+  version: "0.25.5",
+>>>>>>> TelescopeJS/master
   git: "https://github.com/TelescopeJS/telescope-releases.git"
 });
 
@@ -11,7 +15,11 @@ Package.onUse(function (api) {
 
   // --------------------------- 1. Meteor packages dependencies ---------------------------
 
+<<<<<<< HEAD
   api.use(['telescope:core@0.23.0']);
+=======
+  api.use(['telescope:core@0.25.5']);
+>>>>>>> TelescopeJS/master
 
   // ---------------------------------- 2. Files to include ----------------------------------
 
@@ -31,8 +39,7 @@ Package.onUse(function (api) {
 
   api.addFiles([
     'lib/client/templates/current_release.html',
-    'lib/client/templates/current_release.js',
-    'lib/client/scss/releases.scss'
+    'lib/client/templates/current_release.js'
   ], ['client']);
 
   // server
@@ -42,6 +49,7 @@ Package.onUse(function (api) {
     'lib/server/import_releases.js'
   ], ['server']);
 
+<<<<<<< HEAD
   api.addFiles('releases/0.11.0.md', 'server', { isAsset: true });
   api.addFiles('releases/0.11.1.md', 'server', { isAsset: true });
   api.addFiles('releases/0.12.0.md', 'server', { isAsset: true });
@@ -62,6 +70,14 @@ Package.onUse(function (api) {
   // i18n languages (must come last)
 
   var languages = ["ar", "bg", "cs", "da", "de", "el", "en", "es", "et", "fr", "hu", "it", "ja", "ko", "nl", "pl", "pt-BR", "ro", "ru", "sv", "th", "tr", "vi", "zh-CN"];
+=======
+
+  api.addAssets('releases/0.25.5.md', 'server');
+
+  // i18n languages (must come last)
+
+  var languages = ["ar", "bg", "cs", "da", "de", "el", "en", "es", "et", "fr", "hu", "id", "it", "ja", "kk", "ko", "nl", "pl", "pt-BR", "ro", "ru", "sl", "sv", "th", "tr", "vi", "zh-CN"];
+>>>>>>> TelescopeJS/master
   var languagesPaths = languages.map(function (language) {
     return "i18n/"+language+".i18n.json";
   });

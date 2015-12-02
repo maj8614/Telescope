@@ -1,6 +1,11 @@
 <template name="notification_item">
+<<<<<<< HEAD
   <div class="{{#if read}}read{{/if}}">
     <span class="notification-timestamp">{{timeAgo timestamp}}</span>
+=======
+  <div class="{{#if item.data.read}}read{{/if}}">
+    <span class="notification-timestamp">{{timeAgo item.data.timestamp}}:</span>
+>>>>>>> TelescopeJS/master
     <div class="notification-html">
       {{{notificationHTML}}}
     </div>
