@@ -1,5 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+## v0.25.6 “CloudinaryScope”
+
+* Added support for thumbnail caching with Cloudinary (requires adding `telescope:cloudinary` package).
+* Various bug fixes and i18n updates. 
+
+>>>>>>> TelescopeJS/master
 ## v0.25.5 “PrefixerScope”
 
 * Various small bug fixes.

@@ -2,9 +2,13 @@ Package.describe({
   name: "telescope:notifications",
   summary: "Telescope notifications package",
 <<<<<<< HEAD
+<<<<<<< HEAD
   version: "0.23.0",
 =======
   version: "0.25.5",
+>>>>>>> TelescopeJS/master
+=======
+  version: "0.25.6",
 >>>>>>> TelescopeJS/master
   git: "https://github.com/TelescopeJS/telescope-notifications.git"
 });
@@ -15,9 +19,13 @@ Package.onUse(function (api) {
 
   api.use([
 <<<<<<< HEAD
+<<<<<<< HEAD
     'telescope:core@0.23.0',
 =======
     'telescope:core@0.25.5',
+>>>>>>> TelescopeJS/master
+=======
+    'telescope:core@0.25.6',
 >>>>>>> TelescopeJS/master
     'kestanous:herald@1.3.0',
     'kestanous:herald-email@0.5.0'

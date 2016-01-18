@@ -2,9 +2,13 @@ Package.describe({
   name: "telescope:core",
   summary: "Telescope core package",
 <<<<<<< HEAD
+<<<<<<< HEAD
   version: "0.23.0",
 =======
   version: "0.25.5",
+>>>>>>> TelescopeJS/master
+=======
+  version: "0.25.6",
 >>>>>>> TelescopeJS/master
   git: "https://github.com/TelescopeJS/Telescope.git"
 });
@@ -14,6 +18,7 @@ Package.onUse(function(api) {
   api.versionsFrom("METEOR@1.0");
   
   var packages = [
+<<<<<<< HEAD
 <<<<<<< HEAD
     'telescope:lib@0.23.0', //  no dependencies
     'telescope:messages@0.23.0', // lib
@@ -32,6 +37,16 @@ Package.onUse(function(api) {
     'telescope:users@0.25.5', // lib, i18n, settings
     'telescope:comments@0.25.5', // lib, i18n, settings, users
     'telescope:posts@0.25.5' // lib, i18n, settings, users, comments
+>>>>>>> TelescopeJS/master
+=======
+    'telescope:lib@0.25.6', //  no dependencies
+    'telescope:messages@0.25.6', // lib
+    'telescope:i18n@0.25.6', // lib
+    'telescope:events@0.25.6', // lib, i18n
+    'telescope:settings@0.25.6', // lib, i18n
+    'telescope:users@0.25.6', // lib, i18n, settings
+    'telescope:comments@0.25.6', // lib, i18n, settings, users
+    'telescope:posts@0.25.6' // lib, i18n, settings, users, comments
 >>>>>>> TelescopeJS/master
   ];
 

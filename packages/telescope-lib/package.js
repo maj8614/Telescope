@@ -2,9 +2,13 @@ Package.describe({
   name: 'telescope:lib',
   summary: 'Telescope libraries.',
 <<<<<<< HEAD
+<<<<<<< HEAD
   version: '0.23.1',
 =======
   version: '0.25.5',
+>>>>>>> TelescopeJS/master
+=======
+  version: '0.25.6',
 >>>>>>> TelescopeJS/master
   git: "https://github.com/TelescopeJS/Telescope.git"
 });

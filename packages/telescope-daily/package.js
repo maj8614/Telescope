@@ -2,9 +2,13 @@ Package.describe({
   name: "telescope:daily",
   summary: "Telescope daily view",
 <<<<<<< HEAD
+<<<<<<< HEAD
   version: "0.23.0",
 =======
   version: "0.25.5",
+>>>>>>> TelescopeJS/master
+=======
+  version: "0.25.6",
 >>>>>>> TelescopeJS/master
   git: "https://github.com/TelescopeJS/Telescope.git"
 });
@@ -15,10 +19,14 @@ Package.onUse(function (api) {
 
   api.use([
 <<<<<<< HEAD
+<<<<<<< HEAD
     'telescope:core@0.23.0',
     'telescope:singleday@0.23.0',
 =======
     'telescope:core@0.25.5'
+>>>>>>> TelescopeJS/master
+=======
+    'telescope:core@0.25.6'
 >>>>>>> TelescopeJS/master
   ]);
 

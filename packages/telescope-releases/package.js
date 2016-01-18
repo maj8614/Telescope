@@ -2,9 +2,13 @@ Package.describe({
   name: "telescope:releases",
   summary: "Show Telescope release notes and phone home with some stats.",
 <<<<<<< HEAD
+<<<<<<< HEAD
   version: "0.23.0",
 =======
   version: "0.25.5",
+>>>>>>> TelescopeJS/master
+=======
+  version: "0.25.6",
 >>>>>>> TelescopeJS/master
   git: "https://github.com/TelescopeJS/telescope-releases.git"
 });
@@ -16,9 +20,13 @@ Package.onUse(function (api) {
   // --------------------------- 1. Meteor packages dependencies ---------------------------
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   api.use(['telescope:core@0.23.0']);
 =======
   api.use(['telescope:core@0.25.5']);
+>>>>>>> TelescopeJS/master
+=======
+  api.use(['telescope:core@0.25.6']);
 >>>>>>> TelescopeJS/master
 
   // ---------------------------------- 2. Files to include ----------------------------------
@@ -72,7 +80,7 @@ Package.onUse(function (api) {
   var languages = ["ar", "bg", "cs", "da", "de", "el", "en", "es", "et", "fr", "hu", "it", "ja", "ko", "nl", "pl", "pt-BR", "ro", "ru", "sv", "th", "tr", "vi", "zh-CN"];
 =======
 
-  api.addAssets('releases/0.25.5.md', 'server');
+  api.addAssets('releases/0.25.6.md', 'server');
 
   // i18n languages (must come last)
 
