@@ -3,9 +3,13 @@ Package.describe({
   summary: "Telescope comments package",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   version: "0.23.0",
 =======
   version: "0.25.5",
+>>>>>>> TelescopeJS/master
+=======
+  version: "0.25.6",
 >>>>>>> TelescopeJS/master
 =======
   version: "0.25.6",
@@ -20,6 +24,7 @@ Package.onUse(function (api) {
   api.use([
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'telescope:lib@0.23.0',
     'telescope:i18n@0.23.0',
     'telescope:settings@0.23.0',
@@ -31,10 +36,15 @@ Package.onUse(function (api) {
     'telescope:users@0.25.5'
 >>>>>>> TelescopeJS/master
 =======
+=======
+>>>>>>> TelescopeJS/master
     'telescope:lib@0.25.6',
     'telescope:i18n@0.25.6',
     'telescope:settings@0.25.6',
     'telescope:users@0.25.6'
+<<<<<<< HEAD
+>>>>>>> TelescopeJS/master
+=======
 >>>>>>> TelescopeJS/master
   ]);
 

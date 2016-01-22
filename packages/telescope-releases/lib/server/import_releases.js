@@ -23,6 +23,7 @@ Meteor.startup(function () {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   importRelease('0.11.0');
   importRelease('0.11.1');
   importRelease('0.12.0');
@@ -41,6 +42,9 @@ Meteor.startup(function () {
   importRelease('0.23.0');
 =======
   importRelease('0.25.5');
+>>>>>>> TelescopeJS/master
+=======
+  importRelease('0.25.6');
 >>>>>>> TelescopeJS/master
 =======
   importRelease('0.25.6');

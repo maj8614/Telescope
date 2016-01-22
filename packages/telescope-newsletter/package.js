@@ -3,9 +3,13 @@ Package.describe({
   summary: "Telescope email newsletter package",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   version: "0.23.0",
 =======
   version: "0.25.5",
+>>>>>>> TelescopeJS/master
+=======
+  version: "0.25.7",
 >>>>>>> TelescopeJS/master
 =======
   version: "0.25.7",
@@ -24,9 +28,13 @@ Package.onUse(function (api) {
   api.use([
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'telescope:core@0.23.0',
 =======
     'telescope:core@0.25.5',
+>>>>>>> TelescopeJS/master
+=======
+    'telescope:core@0.25.6',
 >>>>>>> TelescopeJS/master
 =======
     'telescope:core@0.25.6',

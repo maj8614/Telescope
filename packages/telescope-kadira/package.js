@@ -3,9 +3,13 @@ Package.describe({
   summary: "Telescope Kadira package",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   version: "0.23.0",
 =======
   version: "0.25.5",
+>>>>>>> TelescopeJS/master
+=======
+  version: "0.25.6",
 >>>>>>> TelescopeJS/master
 =======
   version: "0.25.6",
@@ -20,11 +24,15 @@ Package.onUse(function (api) {
   api.use([
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'telescope:core@0.23.0',
     'meteorhacks:kadira@2.22.1',
     'kadira:debug@2.1.0'
 =======
     'telescope:core@0.25.5',
+=======
+    'telescope:core@0.25.6',
+>>>>>>> TelescopeJS/master
 =======
     'telescope:core@0.25.6',
 >>>>>>> TelescopeJS/master

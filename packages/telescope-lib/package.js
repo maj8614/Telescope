@@ -3,9 +3,13 @@ Package.describe({
   summary: 'Telescope libraries.',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   version: '0.23.1',
 =======
   version: '0.25.5',
+>>>>>>> TelescopeJS/master
+=======
+  version: '0.25.6',
 >>>>>>> TelescopeJS/master
 =======
   version: '0.25.6',

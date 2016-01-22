@@ -72,6 +72,7 @@
   "various_utilities" : "Various utilities.",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "follow_on_twitter": "Follow on Twitter",
   "like_on_facebook": "Like on Facebook",
   "share_on_twitter": "Share on Twitter",
@@ -80,10 +81,15 @@
 >>>>>>> TelescopeJS/master
   "powered_by_telescope": "Powered by Telescope"
 =======
+=======
+>>>>>>> TelescopeJS/master
   "follow_on_twitter" : "Follow on Twitter",
   "like_on_facebook" : "Like on Facebook",
   "share_on_twitter" : "Share on Twitter",
   "share_on_facebook" : "Share on Facebook",
   "powered_by_telescope" : "Powered by Telescope"
+<<<<<<< HEAD
+>>>>>>> TelescopeJS/master
+=======
 >>>>>>> TelescopeJS/master
 }

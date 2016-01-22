@@ -3,9 +3,13 @@ Package.describe({
   summary: "Show Telescope release notes and phone home with some stats.",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   version: "0.23.0",
 =======
   version: "0.25.5",
+>>>>>>> TelescopeJS/master
+=======
+  version: "0.25.6",
 >>>>>>> TelescopeJS/master
 =======
   version: "0.25.6",
@@ -21,9 +25,13 @@ Package.onUse(function (api) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   api.use(['telescope:core@0.23.0']);
 =======
   api.use(['telescope:core@0.25.5']);
+>>>>>>> TelescopeJS/master
+=======
+  api.use(['telescope:core@0.25.6']);
 >>>>>>> TelescopeJS/master
 =======
   api.use(['telescope:core@0.25.6']);
@@ -75,11 +83,14 @@ Package.onUse(function (api) {
   api.addFiles('releases/0.22.2.md', 'server', { isAsset: true });
   api.addFiles('releases/0.23.0.md', 'server', { isAsset: true });
 
+<<<<<<< HEAD
   // i18n languages (must come last)
 
   var languages = ["ar", "bg", "cs", "da", "de", "el", "en", "es", "et", "fr", "hu", "it", "ja", "ko", "nl", "pl", "pt-BR", "ro", "ru", "sv", "th", "tr", "vi", "zh-CN"];
 =======
 
+=======
+>>>>>>> TelescopeJS/master
   api.addAssets('releases/0.25.6.md', 'server');
 
   // i18n languages (must come last)

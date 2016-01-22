@@ -3,10 +3,14 @@ Package.describe({
   summary: "Telescope messages package",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   version: "0.23.0",
   git: "https://github.com/TelescopeJS/telescope-messages.git"
 =======
   version: "0.25.5",
+=======
+  version: "0.25.6",
+>>>>>>> TelescopeJS/master
 =======
   version: "0.25.6",
 >>>>>>> TelescopeJS/master
@@ -20,9 +24,13 @@ Package.onUse(function(api) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   api.use(['telescope:lib@0.23.0']);
 =======
   api.use(['telescope:lib@0.25.5']);
+=======
+  api.use(['telescope:lib@0.25.6']);
+>>>>>>> TelescopeJS/master
 =======
   api.use(['telescope:lib@0.25.6']);
 >>>>>>> TelescopeJS/master

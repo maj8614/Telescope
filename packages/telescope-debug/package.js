@@ -3,9 +3,13 @@ Package.describe({
   summary: "Telescope debug package",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   version: "0.23.0",  
 =======
   version: "0.25.5",  
+>>>>>>> TelescopeJS/master
+=======
+  version: "0.25.6",  
 >>>>>>> TelescopeJS/master
 =======
   version: "0.25.6",  
@@ -20,9 +24,13 @@ Package.onUse(function (api) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   api.use(['telescope:core@0.23.0']);
 =======
   api.use(['telescope:core@0.25.5']);
+>>>>>>> TelescopeJS/master
+=======
+  api.use(['telescope:core@0.25.6']);
 >>>>>>> TelescopeJS/master
 =======
   api.use(['telescope:core@0.25.6']);
